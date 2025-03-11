@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex; /* Use flexbox to align items horizontally */
+  align-items: center; /* Vertically center the items */
+  justify-content: center; /* Center items horizontally */
+  background-color: black; /* Set the background color to black */
+  padding: 30px 0; /* Adds space inside the container (top and bottom padding) */
+  width: 100%; /* Ensures the background stretches across the entire page */
+  height: 20px; /* Gives height to the header */
+  color: white; /* Optional: changes the text color to white for better contrast */
+	border: 2px solid grey;
+}
+
+h1 {
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+  font-size: 30px;
+  color: white; /* Change text color to white for contrast */
+  margin-left: 20px; /* Adds some space between the text and logo */
+}
+
+.logo {
+  width: 50px;           
+  height: 50px;          
+  border-radius: 50%;     /* Makes the logo circular */
+  object-fit: cover;
+	border: 2px solid white;
+}
+.button1, .button2, .button3, .button4{
+  height: 40px;               /* Set the height of the button */
+	position: left 10px;
+  width: 100px;               /* Set a width for the button */
+  background-color: #590098;  /* Set a background color (e.g., blue) */
+  color: white;               /* Set the text color */
+  border: none;               /* Remove the default border */
+  border-radius: 5px;         /* Make the edges of the button slightly rounded */
+  font-size: 16px;            /* Set the font size */
+  display: flex;              /* Use flexbox to center the text */
+  align-items: center;        /* Vertically center the text */
+  justify-content: center;    /* Horizontally center the text */
+  cursor: pointer;           /* Change the cursor to a pointer on hover */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+	
+ 
+}
+
+.button1:hover, .button2:hover, .button3:hover, .button4:hover {
+  background-color: #0056b3;  /* Change the background color when hovered */
+}
+
+
+
+
