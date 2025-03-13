@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Spice-World - Checkout</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="main.js" defer></script>
+  <link rel="icon" type="image/png" href="https://i0.wp.com/paellaworld.co.uk/wp-content/uploads/2024/01/spices-500.jpg">
+</head>
+<body>
+  <div class="header">
+    <div class="buttons-container">
+      <button id="button1" class="button1" type="button">Home</button>
+      <button id="button2" class="button2" type="button">Products</button>
+    </div>
+
+    <div class="logo-container">
+      <img src="https://i0.wp.com/paellaworld.co.uk/wp-content/uploads/2024/01/spices-500.jpg" alt="Website Logo" class="logo">
+      <h1>Spice-World</h1>
+    </div>
+
+    <div class="buttons-container">
+      <button id="button3" class="button3" type="button">Feedback</button>
+      <button id="button4" class="button4" type="button">Checkout</button>
+    </div>
+  </div>
+
+  <div class="checkout-container">
+    <h2 class="checkout-title">Checkout</h2>
+    
+    <div class="spices-container">
+      <!-- Spicy Turmeric -->
+      <div class="spice-item">
+        <img src="https://th.bing.com/th/id/R.8712a7c70dde53b6cc6592ba5cbaee38?rik=Ci9HC7byxWUf6Q&pid=ImgRaw&r=0" alt="Spicy Turmeric" class="spice-image">
+        <div class="spice-details">
+          <h3 class="spice-name">Spicy Turmeric</h3>
+          <p class="spice-price">$10.99</p>
+          <div class="spice-quantity">
+            <button class="quantity-btn decrease" data-id="1">-</button>
+            <span class="quantity-value" id="quantity-1">0</span>
+            <button class="quantity-btn increase" data-id="1">+</button>
+          </div>
+          <p class="spice-total" id="total-1">$0.00</p>
+        </div>
+      </div>
+
+      <!-- Chili Powder -->
+      <div class="spice-item">
+        <img src="https://chilliworkshop.co.uk/wp-content/uploads/2020/02/shutterstock_61570651-chilli-powder-2048x1365.jpg" alt="Chili Powder" class="spice-image">
+        <div class="spice-details">
+          <h3 class="spice-name">Chili Powder</h3>
+          <p class="spice-price">$7.99</p>
+          <div class="spice-quantity">
+            <button class="quantity-btn decrease" data-id="2">-</button>
+            <span class="quantity-value" id="quantity-2">0</span>
+            <button class="quantity-btn increase" data-id="2">+</button>
+          </div>
+          <p class="spice-total" id="total-2">$0.00</p>
+        </div>
+      </div>
+
+      <!-- Cinnamon Sticks -->
+      <div class="spice-item">
+        <img src="https://th.bing.com/th/id/R.3ca8a20909eed06692b0f068a06fbfa9?rik=Qk6qx5xboxmKRA&pid=ImgRaw&r=0" alt="Cinnamon Sticks" class="spice-image">
+        <div class="spice-details">
+          <h3 class="spice-name">Cinnamon Sticks</h3>
+          <p class="spice-price">$5.49</p>
+          <div class="spice-quantity">
+            <button class="quantity-btn decrease" data-id="3">-</button>
+            <span class="quantity-value" id="quantity-3">0</span>
+            <button class="quantity-btn increase" data-id="3">+</button>
+          </div>
+          <p class="spice-total" id="total-3">$0.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <div class="subtotal">
+        <span>Subtotal:</span>
+        <span id="subtotal">$0.00</span>
+      </div>
+    </div>
+
+    <div class="checkout-forms">
+      <form id="checkout-form">
+        <!-- Customer Information -->
+        <div class="form-section">
+          <h3>Your Information</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" required>
+            </div>
+            <div class="form-group">
+              <label for="postcode">Postcode</label>
+              <input type="text" id="postcode" name="postcode" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Information -->
+        <div class="form-section">
+          <h3>Payment Details</h3>
+          <div class="form-group">
+            <label for="cardName">Name on Card</label>
+            <input type="text" id="cardName" name="cardName" required>
+          </div>
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="expiry">Expiry Date</label>
+              <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+            </div>
+            <div class="form-group">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" placeholder="123" required>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="place-order-btn" id="place-order">Place Order</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
