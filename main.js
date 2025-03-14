@@ -1,10 +1,55 @@
-// Checkout page functionality - Add this to your existing main.js file
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Check if we're on the checkout page by looking for checkout-specific elements
-  const checkoutContainer = document.querySelector(".checkout-container");
-  if (!checkoutContainer) return; // Skip this code if not on checkout page
+ 
+  const homeButton = document.getElementById("button1");
+  const productsButton = document.getElementById("button2");
+  const feedbackButton = document.getElementById("button3");
+  const checkoutButton = document.getElementById("button4");
+  const contactUsButton = document.getElementById("contact-us");
+
   
-  // Spice products data
+  if (homeButton) {
+    homeButton.addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+  }
+
+  if (productsButton) {
+    productsButton.addEventListener("click", () => {
+      window.location.href = "products.html";
+    });
+  }
+
+  if (feedbackButton) {
+    feedbackButton.addEventListener("click", () => {
+      window.location.href = "feedback.html";
+    });
+  }
+
+  if (checkoutButton) {
+    checkoutButton.addEventListener("click", () => {
+      window.location.href = "checkout.html";
+    });
+  }
+
+  
+  if (contactUsButton) {
+	  
+    contactUsButton.addEventListener("click", () => {
+		confirm('Are you sure you would like to move to email?')
+		if(confirm){
+      window.location.href = "mailto:spice-world@gmail.com?subject=Contact%20from%20Spice-World%20Website";
+		}
+    });
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const checkoutContainer = document.querySelector(".checkout-container");
+  if (!checkoutContainer) return;
+ 
   const spices = [
     {
       id: 1,
@@ -191,6 +236,48 @@ document.addEventListener("DOMContentLoaded", () => {
     cvvInput.addEventListener("input", (e) => {
       
       e.target.value = e.target.value.replace(/[^0-9]/gi, "").substring(0, 4);
+    });
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const feedbackForm = document.getElementById("feedbackForm");
+  
+  
+  if (feedbackForm) {
+    feedbackForm.addEventListener("submit", (e) => {
+      e.preventDefault(); 
+      
+      // Get form values
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const feedback = document.getElementById("feedback").value.trim();
+      
+      // Validate form
+      if (!name || !email || !feedback) {
+        alert("Please fill out all fields");
+        return;
+      }
+      
+      
+      if (confirm("Are you sure you want to submit your feedback?")) {
+        
+        const subject = "Feedback from " + name;
+        const body = `Name: ${name}%0D%0A` + 
+                     `Email: ${email}%0D%0A` + 
+                     `Feedback: %0D%0A${feedback}`;
+        
+        
+        const mailtoLink = `mailto:spice-world@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+        
+        
+        window.location.href = mailtoLink;
+        
+        
+        feedbackForm.reset();
+      }
     });
   }
 });
